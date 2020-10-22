@@ -14,6 +14,8 @@ features:
   details: Introducción a la librería JS que da soporte al API nativa de Opengate
 - title: New Module
   details: Introducción a la librería New Module
+- title: New Module 2
+  details: Introducción a la librería New Module 2
 footer: amplía)))  | Copyright ©
 ---
 
