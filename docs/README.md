@@ -4,7 +4,7 @@ heroImage: /logo/opengate.png
 heroText: Características avanzadas UX
 tagline: Guía rápida para empezar a hacer uso de las características avanzadas de Opengate UX
 actionText: Comenzar →
-actionLink: /wiwis/
+actionLink: docuUX/wiwis/
 features:
 - title: WiWi Kit de desarrollo (WWDK)
   details: Desarrolla nuevos wizards y widgets a medida para tú solución
@@ -12,6 +12,8 @@ features:
   details: Personaliza los formularios para la gestión de tus entidades
 - title: OGAPI
   details: Introducción a la librería JS que da soporte al API nativa de Opengate
+- title: New Module
+  details: Introducción a la librería New Module
 footer: amplía)))  | Copyright ©
 ---
 
