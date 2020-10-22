@@ -1,0 +1,15 @@
+{
+  "name": "docuExample",
+  "version": "1.0.0",
+  "description": "docuExample description",
+  "main": "index.js",
+  "author": "Manuel Perera",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
