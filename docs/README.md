@@ -3,7 +3,7 @@ home: true
 heroText: Características avanzadas UX
 tagline: Guía rápida para empezar a hacer uso de las características avanzadas de Opengate UX
 actionText: Comenzar →
-actionLink: docuUX/wiwis/
+actionLink: /wiwis/
 features:
 - title: WiWi Kit de desarrollo (WWDK)
   details: Desarrolla nuevos wizards y widgets a medida para tú solución
@@ -17,4 +17,3 @@ features:
   details: Introducción a la librería New Module 2
 footer: amplía)))  | Copyright ©
 ---
-
