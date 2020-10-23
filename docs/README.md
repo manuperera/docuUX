@@ -1,5 +1,6 @@
 ---
 home: true
+heroImage: /logo/opengate.png
 heroText: Características avanzadas UX
 tagline: Guía rápida para empezar a hacer uso de las características avanzadas de Opengate UX
 actionText: Comenzar →
