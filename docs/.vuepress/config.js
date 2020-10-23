@@ -11,7 +11,7 @@ module.exports = {
     locales: {
       // The key is the path for the locale to be nested under.
       // As a special case, the default locale can use '/' as its path.
-      '/': {
+      '/docuUX/': {
         lang: 'Español', // this will be set as the lang attribute on <html>
         title: 'Características avanzadas UX',
         description: 'Primeros pasos'
@@ -26,7 +26,7 @@ module.exports = {
       editLinks: false,
       logo: '/logo/opengate.png',
       locales: {
-        '/': {
+        '/docuUX/': {
           selectText: 'Idiomas',
           nav: [
             {
@@ -63,7 +63,7 @@ module.exports = {
             '/': ['']
           }
         },
-        '/en/': {
+        '/docuUX/en/': {
           selectText: 'Languages',
           nav: [
             {
