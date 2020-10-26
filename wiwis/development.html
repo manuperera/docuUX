@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Desarrollo de WiWi | Opengate UX Quick Reference</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="Here you can learn to develop and deploy your own wiwi (wizard/widget) for the Opengate platform">
+    
+    <link rel="preload" href="/docuUX/assets/css/0.styles.cb29b008.css" as="style"><link rel="preload" href="/docuUX/assets/js/app.4c21e1e4.js" as="script"><link rel="preload" href="/docuUX/assets/js/2.10178664.js" as="script"><link rel="preload" href="/docuUX/assets/js/18.d692276b.js" as="script"><link rel="prefetch" href="/docuUX/assets/js/10.b42ea326.js"><link rel="prefetch" href="/docuUX/assets/js/11.a2292030.js"><link rel="prefetch" href="/docuUX/assets/js/12.1b42c48b.js"><link rel="prefetch" href="/docuUX/assets/js/13.f0a8733b.js"><link rel="prefetch" href="/docuUX/assets/js/14.da01020a.js"><link rel="prefetch" href="/docuUX/assets/js/15.d4744fd1.js"><link rel="prefetch" href="/docuUX/assets/js/16.4b5ffc1b.js"><link rel="prefetch" href="/docuUX/assets/js/17.1cb70bb6.js"><link rel="prefetch" href="/docuUX/assets/js/3.fd2055f7.js"><link rel="prefetch" href="/docuUX/assets/js/4.6fd1ef01.js"><link rel="prefetch" href="/docuUX/assets/js/5.da37f56e.js"><link rel="prefetch" href="/docuUX/assets/js/6.d09cb291.js"><link rel="prefetch" href="/docuUX/assets/js/7.8d0d2fcf.js"><link rel="prefetch" href="/docuUX/assets/js/8.5e7b2a5e.js"><link rel="prefetch" href="/docuUX/assets/js/9.b281ff2f.js">
+    <link rel="stylesheet" href="/docuUX/assets/css/0.styles.cb29b008.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docuUX/" class="home-link router-link-active"><img src="/docuUX/logo/opengate.png" alt="Opengate UX Quick Reference" class="logo"> <span class="site-name can-hide">Opengate UX Quick Reference</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="desarrollo-de-wiwi"><a href="#desarrollo-de-wiwi" class="header-anchor">#</a> Desarrollo de WiWi</h1> <h2 id="como-codificar"><a href="#como-codificar" class="header-anchor">#</a> Cómo codificar</h2> <p>Una vez que haya descargado e instalado todo, su punto de partida será</p> <blockquote><p><strong>&lt;project-dir&gt;</strong>/src/components/wiwi.vue</p></blockquote> <p><strong>wiwi.vue</strong> incluye un ejemplo de un wiwi que usa el framework Vuetify que se usa en Opengate UX.</p> <blockquote><p><a href="https://vuetifyjs.com/" target="_blank" rel="noopener noreferrer">Vuetify<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <h2 id="utilidades-para-desarrollo"><a href="#utilidades-para-desarrollo" class="header-anchor">#</a> Utilidades para desarrollo</h2> <p>El proyecto contiene algunas herramientas (componentes y complementos) contenidos en la web donde se instalará el wiwi.</p> <p>Esto facilita el desarrollo autónomo del wiwi.</p> <p>A continuación se enumeran estas herramientas con ejemplos de cómo usarlas en nuestro wiwi.</p> <h3 id="jsonpath"><a href="#jsonpath" class="header-anchor">#</a> $jsonPath</h3> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'exampleJsonPath'</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      example<span class="token operator">:</span> <span class="token punctuation">{</span>
+        one<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+        two<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$jsonPath</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>example<span class="token punctuation">,</span> <span class="token string">'$.one'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token comment">//return 1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="api"><a href="#api" class="header-anchor">#</a> $api</h3> <p><a href="/docuUX/ogapi/">OGAPI</a></p> <ol><li>Configurar</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// src/plugins/store.js</span>
+<span class="token punctuation">{</span>
+  apiKey<span class="token operator">:</span> <span class="token string">'@@API_KEY@@'</span><span class="token punctuation">,</span>
+  url<span class="token operator">:</span> <span class="token string">'@@NORTH_API@@'</span><span class="token punctuation">,</span>
+  timeout<span class="token operator">:</span> <span class="token number">60000</span><span class="token punctuation">,</span>
+  south<span class="token operator">:</span> <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'@@SOUTH_API@@'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ol start="2"><li>Uso</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapGetters <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'exampleApi'</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      entries<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">async</span> <span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>entries<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>entries<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span>builder<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">.</span>statusCode <span class="token operator">!==</span> <span class="token number">204</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>entries <span class="token operator">=</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>entities<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">//https://vuex.vuejs.org/guide/getters.html#the-mapgetters-helper</span>
+    <span class="token operator">...</span><span class="token function">mapGetters</span><span class="token punctuation">(</span><span class="token punctuation">{</span> api<span class="token operator">:</span> <span class="token string">&quot;$api&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>api<span class="token punctuation">.</span><span class="token function">entitiesSearchBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/docuUX/assets/js/app.4c21e1e4.js" defer></script><script src="/docuUX/assets/js/2.10178664.js" defer></script><script src="/docuUX/assets/js/18.d692276b.js" defer></script>
+  </body>
+</html>
