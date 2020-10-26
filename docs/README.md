@@ -16,5 +16,7 @@ features:
   details: Introducción a la librería New Module
 - title: New Module 2
   details: Introducción a la librería New Module 2
+- title: New Module 3
+  details: Introducción a la librería New Module 3
 footer: amplía)))  | Copyright ©
 ---
